@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : powerstat
-Version  : 0.03.02
-Release  : 6
-URL      : https://github.com/ColinIanKing/powerstat/archive/V0.03.02/powerstat-0.03.02.tar.gz
-Source0  : https://github.com/ColinIanKing/powerstat/archive/V0.03.02/powerstat-0.03.02.tar.gz
+Version  : 0.03.03
+Release  : 7
+URL      : https://github.com/ColinIanKing/powerstat/archive/V0.03.03/powerstat-0.03.03.tar.gz
+Source0  : https://github.com/ColinIanKing/powerstat/archive/V0.03.03/powerstat-0.03.03.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -58,15 +58,15 @@ man components for the powerstat package.
 
 
 %prep
-%setup -q -n powerstat-0.03.02
-cd %{_builddir}/powerstat-0.03.02
+%setup -q -n powerstat-0.03.03
+cd %{_builddir}/powerstat-0.03.03
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679671469
+export SOURCE_DATE_EPOCH=1682356755
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -79,7 +79,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1679671469
+export SOURCE_DATE_EPOCH=1682356755
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/powerstat
 cp %{_builddir}/powerstat-%{version}/COPYING %{buildroot}/usr/share/package-licenses/powerstat/4cc77b90af91e615a64ae04893fdffa7939db84c || :
